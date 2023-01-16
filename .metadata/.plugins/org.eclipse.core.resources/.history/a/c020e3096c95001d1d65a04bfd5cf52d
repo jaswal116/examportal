@@ -1,0 +1,5 @@
+package com.jaswal.model;
+
+public class User {
+
+}

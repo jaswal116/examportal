@@ -1,0 +1,26 @@
+package com.jaswal.model;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name="users")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class User implements Serializable {
+
+	private long id;
+	private String username;
+	private String password;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String phone;
+	private boolean enabled = true;
+}

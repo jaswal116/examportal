@@ -1,0 +1,22 @@
+package com.jaswal.service.impl;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.jaswal.model.User;
+import com.jaswal.model.UserRole;
+import com.jaswal.repo.UserRepository;
+import com.jaswal.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	@Override
+	public User createUser(User user, Set<UserRole> userRoles) {
+			
+		return null;
+	}
+
+}

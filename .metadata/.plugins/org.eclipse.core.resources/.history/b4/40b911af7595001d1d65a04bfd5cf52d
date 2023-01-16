@@ -1,0 +1,5 @@
+package com.jaswal.controller;
+
+public class UserController {
+
+}
