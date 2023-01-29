@@ -8,17 +8,17 @@ import {MatButtonModule} from '@angular/material/button';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './pages/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     FooterComponent,
-    NavbarComponent,
-    LoginComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
