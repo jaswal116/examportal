@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   public user={
     email:'',
@@ -30,11 +31,15 @@ export class SignupComponent implements OnInit {
     // call addUser : userService
     this.userService.addUser(this.user).toPromise().then(data => {
         console.log(data);
-        alert('success');
+        this.goToLogin();
     }).catch(error => {
         console.log(error);
         alert('error happened');
     });
   }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
+    }
 
 }
